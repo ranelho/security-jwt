@@ -1,5 +1,6 @@
 package com.bezkoder.spring.security.postgresql.usuario.domain;
 
+import com.bezkoder.spring.security.postgresql.usuario.application.api.RoleRuquest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,7 +21,10 @@ public class Role {
 	private UUID id;
 
 	@Enumerated(EnumType.STRING)
-	@Column(length = 20)
+	@Column(length = 20, unique = true)
 	private ERole name;
 
+	public Role(RoleRuquest roleRuquest) {
+		this.name = roleRuquest.getName();
+	}
 }

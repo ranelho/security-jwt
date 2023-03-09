@@ -1,6 +1,7 @@
 package com.bezkoder.spring.security.postgresql.usuario.infra;
 
 import com.bezkoder.spring.security.postgresql.usuario.application.repository.UserRepository;
+import com.bezkoder.spring.security.postgresql.usuario.domain.Role;
 import com.bezkoder.spring.security.postgresql.usuario.domain.User;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -15,6 +16,7 @@ import java.util.Optional;
 public class UserInfraRepository implements UserRepository {
 
     private final UserSpringDataJPARepository userSpringDataJPARepository;
+    private final RoleSpingDataJPARepository roleSpingDataJPARepository;
 
     @Override
     public User salva(User usuario) {
@@ -22,6 +24,14 @@ public class UserInfraRepository implements UserRepository {
         userSpringDataJPARepository.save(usuario);
         log.info("[finaliza] UserInfraRepository - salva");
         return usuario;
+    }
+
+    @Override
+    public Role salvaRole(Role role) {
+        log.info("[inicia] UserInfraRepository - salvaRole");
+        roleSpingDataJPARepository.save(role);
+        log.info("[finaliza] UserInfraRepository - salvaRole");
+        return role;
     }
 
     @Override

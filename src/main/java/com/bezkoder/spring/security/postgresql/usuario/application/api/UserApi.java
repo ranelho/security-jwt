@@ -13,8 +13,11 @@ public interface UserApi {
     @ResponseStatus(code = HttpStatus.CREATED)
     UserResponse postUsuario(@Valid @RequestBody UserRequest usuarioRequest);
 
+    @PostMapping("/role")
+    @ResponseStatus(code = HttpStatus.CREATED)
+    RoleResponse postRole(@Valid @RequestBody RoleRuquest roleRuquest);
+
     @GetMapping(value = "/{usuario}")
     @ResponseStatus(code = HttpStatus.OK)
     UserResponse getByUsuario(@PathVariable String usuario);
-
 }

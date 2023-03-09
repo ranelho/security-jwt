@@ -1,22 +1,20 @@
 package com.bezkoder.spring.security.postgresql.usuario.application.service;
 
+import com.bezkoder.spring.security.postgresql.handler.APIException;
 import com.bezkoder.spring.security.postgresql.security.services.UserDetailsApplicationService;
+import com.bezkoder.spring.security.postgresql.usuario.application.api.RoleResponse;
+import com.bezkoder.spring.security.postgresql.usuario.application.api.RoleRuquest;
 import com.bezkoder.spring.security.postgresql.usuario.application.api.UserRequest;
 import com.bezkoder.spring.security.postgresql.usuario.application.api.UserResponse;
 import com.bezkoder.spring.security.postgresql.usuario.application.repository.RoleRepository;
 import com.bezkoder.spring.security.postgresql.usuario.application.repository.UserRepository;
-import com.bezkoder.spring.security.postgresql.usuario.domain.ERole;
 import com.bezkoder.spring.security.postgresql.usuario.domain.Role;
 import com.bezkoder.spring.security.postgresql.usuario.domain.User;
-import com.bezkoder.spring.security.postgresql.handler.APIException;
-import com.bezkoder.spring.security.postgresql.usuario.domain.ValidaRole;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import lombok.var;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-
-import java.util.HashSet;
-import java.util.Set;
 
 @Service
 @AllArgsConstructor
@@ -34,6 +32,18 @@ public class UserApplicationService implements UserService {
         User usuario = usuarioRepository.salva(new User(usuarioRequest, role));
         log.info("[finaliza] UsuarioApplicationService - novoUsuario");
         return new UserResponse(usuario);
+    }
+
+    @Override
+    public RoleResponse novaRole(RoleRuquest roleRuquest) {
+        log.info("[inicia] UsuarioApplicationService - novaRole");
+        if(roleRepository.findByName(roleRuquest.getName()).isPresent()) {
+            throw APIException.build(HttpStatus.BAD_REQUEST, "Role já cadastrada!");
+        }else {
+            Role role = usuarioRepository.salvaRole(new Role(roleRuquest));
+            log.info("[finaliza] UsuarioApplicationService - novaRole");
+            return new RoleResponse(role);
+        }
     }
 
     @Override

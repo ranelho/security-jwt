@@ -22,6 +22,15 @@ public class UserRestController implements UserApi {
     }
 
     @Override
+    public RoleResponse postRole(RoleRuquest roleRuquest) {
+        log.info("[inicia] UsuarioRestController - postRole");
+        RoleResponse roleResponse = userService.novaRole(roleRuquest);
+        log.info("[finaliza] UsuarioRestController - postRole");
+        return roleResponse;
+
+    }
+
+    @Override
     public UserResponse getByUsuario(String usuario) {
         log.info("[inicia] UsuarioRestController - getByUsuario");
         User user = userService.findByUsuario(usuario);
