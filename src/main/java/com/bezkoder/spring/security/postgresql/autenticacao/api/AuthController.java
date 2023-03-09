@@ -1,4 +1,4 @@
-package com.bezkoder.spring.security.postgresql.usuario.application.api;
+package com.bezkoder.spring.security.postgresql.autenticacao.api;
 
 import java.util.HashSet;
 import java.util.List;
@@ -23,8 +23,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bezkoder.spring.security.postgresql.usuario.domain.ERole;
 import com.bezkoder.spring.security.postgresql.usuario.domain.Role;
 import com.bezkoder.spring.security.postgresql.usuario.domain.User;
-import com.bezkoder.spring.security.postgresql.usuario.application.api.repository.RoleRepository;
-import com.bezkoder.spring.security.postgresql.usuario.application.api.repository.UserRepository;
+import com.bezkoder.spring.security.postgresql.usuario.application.repository.RoleRepositoryOld;
+import com.bezkoder.spring.security.postgresql.usuario.application.repository.UserRepositoryOld;
 import com.bezkoder.spring.security.postgresql.security.jwt.JwtUtils;
 import com.bezkoder.spring.security.postgresql.security.services.UserDetailsImpl;
 
@@ -36,10 +36,10 @@ public class AuthController {
 	AuthenticationManager authenticationManager;
 
 	@Autowired
-	UserRepository userRepository;
+	UserRepositoryOld userRepositoryOld;
 
 	@Autowired
-	RoleRepository roleRepository;
+	RoleRepositoryOld roleRepository;
 
 	@Autowired
 	PasswordEncoder encoder;
@@ -68,15 +68,15 @@ public class AuthController {
 												 roles));
 	}
 
-	@PostMapping("/signup")
+	/*@PostMapping("/signup")
 	public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
-		if (userRepository.existsByUsername(signUpRequest.getUsername())) {
+		if (userRepositoryOld.existsByUsername(signUpRequest.getUsername())) {
 			return ResponseEntity
 					.badRequest()
 					.body(new MessageResponse("Error: Username is already taken!"));
 		}
 
-		if (userRepository.existsByEmail(signUpRequest.getEmail())) {
+		if (userRepositoryOld.existsByEmail(signUpRequest.getEmail())) {
 			return ResponseEntity
 					.badRequest()
 					.body(new MessageResponse("Error: Email is already in use!"));
@@ -118,8 +118,8 @@ public class AuthController {
 		}
 
 		user.setRoles(roles);
-		userRepository.save(user);
+		userRepositoryOld.save(user);
 
 		return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
-	}
+	}*/
 }

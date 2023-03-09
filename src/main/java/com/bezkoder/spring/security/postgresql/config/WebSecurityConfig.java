@@ -21,13 +21,13 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import com.bezkoder.spring.security.postgresql.security.jwt.AuthEntryPointJwt;
 import com.bezkoder.spring.security.postgresql.security.jwt.AuthTokenFilter;
-import com.bezkoder.spring.security.postgresql.security.services.UserDetailsServiceImpl;
+import com.bezkoder.spring.security.postgresql.security.services.UserDetailsApplicationService;
 
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig { 	@Autowired
-	UserDetailsServiceImpl userDetailsService;
+UserDetailsApplicationService userDetailsService;
 
 	@Autowired
 	private AuthEntryPointJwt unauthorizedHandler;

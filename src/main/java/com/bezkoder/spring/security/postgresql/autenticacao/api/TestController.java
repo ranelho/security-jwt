@@ -1,4 +1,4 @@
-package com.bezkoder.spring.security.postgresql.usuario.application.api;
+package com.bezkoder.spring.security.postgresql.autenticacao.api;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;

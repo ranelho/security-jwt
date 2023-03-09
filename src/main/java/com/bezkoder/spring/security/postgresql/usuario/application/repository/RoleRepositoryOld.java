@@ -1,4 +1,4 @@
-package com.bezkoder.spring.security.postgresql.usuario.application.api.repository;
+package com.bezkoder.spring.security.postgresql.usuario.application.repository;
 
 import java.util.Optional;
 
@@ -9,6 +9,6 @@ import com.bezkoder.spring.security.postgresql.usuario.domain.ERole;
 import com.bezkoder.spring.security.postgresql.usuario.domain.Role;
 
 @Repository
-public interface RoleRepository extends JpaRepository<Role, Long> {
+public interface RoleRepositoryOld extends JpaRepository<Role, Long> {
   Optional<Role> findByName(ERole name);
 }

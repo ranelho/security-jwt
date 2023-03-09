@@ -1,4 +1,4 @@
-package com.bezkoder.spring.security.postgresql.usuario.application.api;
+package com.bezkoder.spring.security.postgresql.autenticacao.api;
 
 import java.util.Set;
 

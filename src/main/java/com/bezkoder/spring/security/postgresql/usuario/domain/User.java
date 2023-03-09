@@ -1,18 +1,20 @@
 package com.bezkoder.spring.security.postgresql.usuario.domain;
 
+import com.bezkoder.spring.security.postgresql.usuario.application.api.UserRequest;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.HashSet;
-import java.util.Set;
-import java.util.UUID;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
+import java.util.UUID;
 
 @Entity
 @Table(	name = "users", 
@@ -45,7 +47,7 @@ public class User {
 	@JoinTable(	name = "user_roles", 
 				joinColumns = @JoinColumn(name = "user_id"), 
 				inverseJoinColumns = @JoinColumn(name = "role_id"))
-	private Set<Role> roles = new HashSet<>();
+	private List<Role> roles;
 
 	public User(String username, String email, String password) {
 		this.username = username;
@@ -53,7 +55,11 @@ public class User {
 		this.password = password;
 	}
 
-	public void setRoles(Set<Role> roles) {
-		this.roles = roles;
+	public User(UserRequest usuarioRequest, Role role) {
+		this.username = usuarioRequest.getUsername();
+		this.password = new BCryptPasswordEncoder().encode(usuarioRequest.getPassword());
+		this.email = usuarioRequest.getEmail();
+		this.roles = Collections.singletonList(role);
 	}
+
 }
