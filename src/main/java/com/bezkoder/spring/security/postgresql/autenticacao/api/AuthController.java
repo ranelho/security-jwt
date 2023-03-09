@@ -1,3 +1,4 @@
+/*
 package com.bezkoder.spring.security.postgresql.autenticacao.api;
 
 import com.bezkoder.spring.security.postgresql.security.jwt.JwtUtils;
@@ -57,7 +58,8 @@ public class AuthController {
 												 roles));
 	}
 
-	/*@PostMapping("/signup")
+	*/
+/*@PostMapping("/signup")
 	public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
 		if (userRepositoryOld.existsByUsername(signUpRequest.getUsername())) {
 			return ResponseEntity
@@ -110,5 +112,7 @@ public class AuthController {
 		userRepositoryOld.save(user);
 
 		return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
-	}*/
+	}*//*
+
 }
+*/

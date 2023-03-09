@@ -15,7 +15,7 @@ public class AuthRestController implements AuthApi {
     @Override
     public JwtResponse autentica(LoginRequest loginRequest) throws AuthenticationException {
         log.info("[inicio] Iniciando Metodo autenciacao em AutenticacaoController");
-        JwtResponse jwtResponse = authService.autentica(loginRequest);
+        JwtResponse jwtResponse = authService.autentica(loginRequest.getUserPassToken());
         log.info("[finaliza] Retornando Token para o cliente");
         return  jwtResponse;
     }

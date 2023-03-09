@@ -13,8 +13,21 @@ public class JwtResponse {
 	private UUID id;
 	private String username;
 	private String email;
-	private List<String> roles;
+	//private List<String> roles;
 
+	public JwtResponse(String accessToken, UserDetailsImpl userDetails) {
+		this.token = accessToken;
+		this.id = userDetails.getId();
+		this.username = userDetails.getUsername();
+		this.email = userDetails.getEmail();
+	}
+
+/*
+	public List<String> getRoles() {
+		return roles;
+	}*/
+
+/*
 	public JwtResponse(String accessToken, UUID userId, String username, String email, List<String> roles) {
 		this.token = accessToken;
 		this.id = userId;
@@ -29,10 +42,5 @@ public class JwtResponse {
 		this.username = userDetails.getUsername();
 		this.email = userDetails.getEmail();
 		this.roles = roles;
-	}
-
-
-	public List<String> getRoles() {
-		return roles;
-	}
+	}*/
 }

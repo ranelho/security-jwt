@@ -25,22 +25,14 @@ public class AuthApplicationService implements AuthService {
     AuthenticationManager authenticationManager;
     JwtUtils jwtUtils;
 
-
     @Override
-    public JwtResponse autentica(LoginRequest loginRequest) {
+    public JwtResponse autentica(UsernamePasswordAuthenticationToken userPassToken) {
         log.info("[inicio] AuthApplicationService - autentica");
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
-
+        Authentication authentication = authenticationManager.authenticate(userPassToken);
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String jwt = jwtUtils.generateJwtToken(authentication);
-
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
-        List<String> roles = userDetails.getAuthorities().stream()
-                .map(item -> item.getAuthority())
-                .collect(Collectors.toList());
-
         log.info("[finaliza] AuthApplicationService - autentica");
-        return new JwtResponse(jwt,userDetails, roles);
+        return new JwtResponse(jwt,userDetails);
     }
 }
