@@ -16,4 +16,5 @@ public interface UserApi {
     @GetMapping(value = "/{usuario}")
     @ResponseStatus(code = HttpStatus.OK)
     UserResponse getByUsuario(@PathVariable String usuario);
+
 }

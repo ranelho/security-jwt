@@ -1,12 +1,9 @@
 package com.bezkoder.spring.security.postgresql.autenticacao.api;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-
-import javax.validation.Valid;
-
+import com.bezkoder.spring.security.postgresql.security.jwt.JwtUtils;
+import com.bezkoder.spring.security.postgresql.security.services.UserDetailsImpl;
+import com.bezkoder.spring.security.postgresql.usuario.application.repository.RoleRepositoryOld;
+import com.bezkoder.spring.security.postgresql.usuario.application.repository.UserRepositoryOld;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -14,23 +11,15 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import com.bezkoder.spring.security.postgresql.usuario.domain.ERole;
-import com.bezkoder.spring.security.postgresql.usuario.domain.Role;
-import com.bezkoder.spring.security.postgresql.usuario.domain.User;
-import com.bezkoder.spring.security.postgresql.usuario.application.repository.RoleRepositoryOld;
-import com.bezkoder.spring.security.postgresql.usuario.application.repository.UserRepositoryOld;
-import com.bezkoder.spring.security.postgresql.security.jwt.JwtUtils;
-import com.bezkoder.spring.security.postgresql.security.services.UserDetailsImpl;
+import javax.validation.Valid;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/authOld")
 public class AuthController {
 	@Autowired
 	AuthenticationManager authenticationManager;

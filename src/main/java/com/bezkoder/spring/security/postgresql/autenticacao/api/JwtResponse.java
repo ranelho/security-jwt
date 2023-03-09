@@ -1,5 +1,6 @@
 package com.bezkoder.spring.security.postgresql.autenticacao.api;
 
+import com.bezkoder.spring.security.postgresql.security.services.UserDetailsImpl;
 import lombok.Value;
 
 import java.util.List;
@@ -22,6 +23,13 @@ public class JwtResponse {
 		this.roles = roles;
 	}
 
+	public JwtResponse(String accessToken, UserDetailsImpl userDetails, List<String> roles) {
+		this.token = accessToken;
+		this.id = userDetails.getId();
+		this.username = userDetails.getUsername();
+		this.email = userDetails.getEmail();
+		this.roles = roles;
+	}
 
 
 	public List<String> getRoles() {
