@@ -1,0 +1,24 @@
+server:
+  servlet:
+    context-path: /security/api
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/testdb?createDatabaseIfNotExist=true
+    username: postgres
+    password: 852456
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+springdoc:
+  swagger-ui:
+    path: /public/swagger
+
+servico:
+  jwt:
+    jwtExpirationMs: ${SERVICO_JWT_JWTEXPIRATIONMS:86400000}
+    jwtSecret: ${SERVICO_JWT_JWTSECRET:bezKoderSecretKey}
