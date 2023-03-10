@@ -9,13 +9,13 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.rlti</groupId>
-	<artifactId>spring-boot-security-postgresql</artifactId>
+	<artifactId>spring-boot-security</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-security-postgresql</name>
-	<description>Spring Boot, Spring Security, PostgreSQL: JWT Authentication &amp; Authorization example</description>
+	<name>spring-boot-security</name>
+	<description>Spring Boot, Spring Security, PostgreSQL: JWT Authentication &amp; Authorization</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>17</java.version>
 		<spring-doc.version>1.6.14</spring-doc.version>
 	</properties>
 
