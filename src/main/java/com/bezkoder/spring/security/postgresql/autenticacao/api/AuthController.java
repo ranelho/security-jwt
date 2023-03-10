@@ -1,3 +1,4 @@
+/*
 package com.bezkoder.spring.security.postgresql.autenticacao.api;
 
 import com.bezkoder.spring.security.postgresql.autenticacao.api.request.TokenRefreshRequest;
@@ -43,7 +44,6 @@ public class AuthController {
 
   @Autowired
   RefreshTokenService refreshTokenService;
-/*
  @PostMapping("/signin")
   public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
 
@@ -63,8 +63,8 @@ public class AuthController {
 
     return ResponseEntity.ok(new JwtResponse(jwt, refreshToken.getToken(), userDetails.getId(),
         userDetails.getUsername(), userDetails.getEmail(), roles));
-  }*/
-/*
+  }
+
 
   @PostMapping("/signup")
   public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
@@ -115,7 +115,8 @@ public class AuthController {
 
     return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
   }
-*/
+
+
 
   @PostMapping("/refreshtoken")
   public ResponseEntity<?> refreshtoken(@Valid @RequestBody TokenRefreshRequest request) {
@@ -142,3 +143,4 @@ public class AuthController {
 
 
 }
+*/
