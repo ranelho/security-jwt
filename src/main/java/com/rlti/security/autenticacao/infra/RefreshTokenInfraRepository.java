@@ -1,7 +1,7 @@
-package com.rlti.security.usuario.infra;
+package com.rlti.security.autenticacao.infra;
 
-import com.rlti.security.usuario.application.repository.RefreshTokenRepository;
-import com.rlti.security.usuario.domain.RefreshToken;
+import com.rlti.security.autenticacao.application.repository.RefreshTokenRepository;
+import com.rlti.security.autenticacao.domain.RefreshToken;
 
 import java.util.Optional;
 

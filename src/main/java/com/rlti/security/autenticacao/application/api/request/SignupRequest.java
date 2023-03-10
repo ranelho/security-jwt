@@ -1,4 +1,4 @@
-package com.rlti.security.autenticacao.api.request;
+package com.rlti.security.autenticacao.application.api.request;
 
 import java.util.Set;
 

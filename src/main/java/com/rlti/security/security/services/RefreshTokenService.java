@@ -1,8 +1,8 @@
 package com.rlti.security.security.services;
 
 import com.rlti.security.security.exception.TokenRefreshException;
-import com.rlti.security.usuario.domain.RefreshToken;
-import com.rlti.security.usuario.infra.RefreshTokenSpringDataJPARepository;
+import com.rlti.security.autenticacao.domain.RefreshToken;
+import com.rlti.security.autenticacao.infra.RefreshTokenSpringDataJPARepository;
 import com.rlti.security.usuario.infra.UserSpringDataJPARepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,4 +1,4 @@
-package com.rlti.security.autenticacao.api.response;
+package com.rlti.security.autenticacao.application.api.response;
 
 import com.rlti.security.security.services.UserDetailsImpl;
 import lombok.Value;

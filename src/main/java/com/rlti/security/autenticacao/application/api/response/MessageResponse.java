@@ -1,4 +1,4 @@
-package com.rlti.security.autenticacao.api.response;
+package com.rlti.security.autenticacao.application.api.response;
 
 public class MessageResponse {
 	private String message;

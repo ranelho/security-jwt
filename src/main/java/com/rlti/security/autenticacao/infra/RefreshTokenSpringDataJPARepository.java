@@ -1,6 +1,6 @@
-package com.rlti.security.usuario.infra;
+package com.rlti.security.autenticacao.infra;
 
-import com.rlti.security.usuario.domain.RefreshToken;
+import com.rlti.security.autenticacao.domain.RefreshToken;
 import com.rlti.security.usuario.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

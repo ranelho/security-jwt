@@ -1,11 +1,11 @@
-package com.rlti.security.autenticacao.api;
+package com.rlti.security.autenticacao.application.api;
 
 
-import com.rlti.security.autenticacao.api.response.TokenRefreshResponse;
-import com.rlti.security.autenticacao.api.request.LoginRequest;
-import com.rlti.security.autenticacao.api.request.TokenRefreshRequest;
-import com.rlti.security.autenticacao.api.response.JwtResponse;
-import com.rlti.security.autenticacao.api.response.MessageResponse;
+import com.rlti.security.autenticacao.application.api.response.TokenRefreshResponse;
+import com.rlti.security.autenticacao.application.api.request.LoginRequest;
+import com.rlti.security.autenticacao.application.api.request.TokenRefreshRequest;
+import com.rlti.security.autenticacao.application.api.response.JwtResponse;
+import com.rlti.security.autenticacao.application.api.response.MessageResponse;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.annotation.*;
 

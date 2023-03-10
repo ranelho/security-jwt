@@ -1,5 +1,6 @@
-package com.rlti.security.usuario.domain;
+package com.rlti.security.autenticacao.domain;
 
+import com.rlti.security.usuario.domain.User;
 import lombok.NoArgsConstructor;
 
 import java.time.Instant;

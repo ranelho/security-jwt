@@ -1,14 +1,14 @@
-package com.rlti.security.autenticacao.service;
+package com.rlti.security.autenticacao.application.service;
 
-import com.rlti.security.autenticacao.api.request.TokenRefreshRequest;
-import com.rlti.security.autenticacao.api.response.JwtResponse;
-import com.rlti.security.autenticacao.api.response.MessageResponse;
-import com.rlti.security.autenticacao.api.response.TokenRefreshResponse;
+import com.rlti.security.autenticacao.application.api.request.TokenRefreshRequest;
+import com.rlti.security.autenticacao.application.api.response.JwtResponse;
+import com.rlti.security.autenticacao.application.api.response.MessageResponse;
+import com.rlti.security.autenticacao.application.api.response.TokenRefreshResponse;
 import com.rlti.security.security.exception.TokenRefreshException;
 import com.rlti.security.security.services.RefreshTokenService;
 import com.rlti.security.security.jwt.JwtUtils;
 import com.rlti.security.security.services.UserDetailsImpl;
-import com.rlti.security.usuario.domain.RefreshToken;
+import com.rlti.security.autenticacao.domain.RefreshToken;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.security.authentication.AuthenticationManager;
