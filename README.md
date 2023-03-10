@@ -1,6 +1,6 @@
-# Spring Boot, Spring Security, PostgreSQL: JWT Authentication & Authorization example
+# Spring Boot, Spring Security, PostgreSQL: JWT Authentication & Authorization example - Refactored by: Ranelho Lacerda
 # Código Original: https://www.bezkoder.com/spring-boot-security-postgresql-jwt-authentication/
-# Adapação para Necessidade e implementação de métodos, POST, GET.
+# Adapação para Necessidade e implementação de métodos, POST's, GET's, REFRESHTOKEN.
 
 ## Cadastro de Usuário, Login de Usuário e Processo de Autorização.
 O diagrama mostra o fluxo de como implementamos o processo de Registro de Usuário, Login de Usuário e Autorização.
