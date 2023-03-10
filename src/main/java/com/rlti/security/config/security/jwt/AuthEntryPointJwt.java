@@ -1,4 +1,4 @@
-package com.rlti.security.security.jwt;
+package com.rlti.security.config.security.jwt;
 
 import java.io.IOException;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.rlti.security.security.services;
+package com.rlti.security.config.security.services;
 
 import com.rlti.security.usuario.domain.User;
 import com.rlti.security.usuario.infra.UserSpringDataJPARepository;

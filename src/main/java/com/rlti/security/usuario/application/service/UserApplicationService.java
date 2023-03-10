@@ -7,7 +7,7 @@ import com.rlti.security.usuario.application.repository.UserRepository;
 import com.rlti.security.usuario.domain.Role;
 import com.rlti.security.usuario.domain.User;
 import com.rlti.security.handler.APIException;
-import com.rlti.security.security.services.UserDetailsApplicationService;
+import com.rlti.security.config.security.services.UserDetailsApplicationService;
 import com.rlti.security.usuario.application.api.request.RoleRuquest;
 import com.rlti.security.usuario.application.repository.RoleRepository;
 import lombok.AllArgsConstructor;

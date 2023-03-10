@@ -1,4 +1,4 @@
-package com.rlti.security.security.services;
+package com.rlti.security.config.security.services;
 
 import java.util.Collection;
 import java.util.List;

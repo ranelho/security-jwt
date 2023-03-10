@@ -1,4 +1,4 @@
-package com.rlti.security.security.advice;
+package com.rlti.security.config.security.advice;
 
 import java.util.Date;
 

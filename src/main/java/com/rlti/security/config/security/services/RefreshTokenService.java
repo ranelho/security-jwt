@@ -1,6 +1,6 @@
-package com.rlti.security.security.services;
+package com.rlti.security.config.security.services;
 
-import com.rlti.security.security.exception.TokenRefreshException;
+import com.rlti.security.config.security.exception.TokenRefreshException;
 import com.rlti.security.autenticacao.domain.RefreshToken;
 import com.rlti.security.autenticacao.infra.RefreshTokenSpringDataJPARepository;
 import com.rlti.security.usuario.infra.UserSpringDataJPARepository;

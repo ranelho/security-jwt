@@ -1,6 +1,6 @@
 package com.rlti.security.autenticacao.application.api.response;
 
-import com.rlti.security.security.services.UserDetailsImpl;
+import com.rlti.security.config.security.services.UserDetailsImpl;
 import lombok.Value;
 
 import java.util.UUID;

@@ -4,10 +4,10 @@ import com.rlti.security.autenticacao.application.api.request.TokenRefreshReques
 import com.rlti.security.autenticacao.application.api.response.JwtResponse;
 import com.rlti.security.autenticacao.application.api.response.MessageResponse;
 import com.rlti.security.autenticacao.application.api.response.TokenRefreshResponse;
-import com.rlti.security.security.exception.TokenRefreshException;
-import com.rlti.security.security.services.RefreshTokenService;
-import com.rlti.security.security.jwt.JwtUtils;
-import com.rlti.security.security.services.UserDetailsImpl;
+import com.rlti.security.config.security.exception.TokenRefreshException;
+import com.rlti.security.config.security.services.RefreshTokenService;
+import com.rlti.security.config.security.jwt.JwtUtils;
+import com.rlti.security.config.security.services.UserDetailsImpl;
 import com.rlti.security.autenticacao.domain.RefreshToken;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;

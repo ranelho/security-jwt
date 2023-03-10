@@ -1,8 +1,8 @@
 package com.rlti.security.config;
 
-import com.rlti.security.security.jwt.AuthEntryPointJwt;
-import com.rlti.security.security.jwt.AuthTokenFilter;
-import com.rlti.security.security.services.UserDetailsApplicationService;
+import com.rlti.security.config.security.jwt.AuthEntryPointJwt;
+import com.rlti.security.config.security.jwt.AuthTokenFilter;
+import com.rlti.security.config.security.services.UserDetailsApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
