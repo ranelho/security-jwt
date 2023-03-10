@@ -1,21 +1,17 @@
-package com.bezkoder.spring.security.postgresql.autenticacao.api.service;
+package com.bezkoder.spring.security.postgresql.autenticacao.service;
 
-import com.bezkoder.spring.security.postgresql.autenticacao.api.JwtResponse;
-import com.bezkoder.spring.security.postgresql.autenticacao.api.LoginRequest;
+import com.bezkoder.spring.security.postgresql.autenticacao.api.response.JwtResponse;
 import com.bezkoder.spring.security.postgresql.security.jwt.JwtUtils;
+import com.bezkoder.spring.security.postgresql.security.services.RefreshTokenService;
 import com.bezkoder.spring.security.postgresql.security.services.UserDetailsImpl;
-import com.bezkoder.spring.security.postgresql.usuario.application.repository.UserRepository;
+import com.bezkoder.spring.security.postgresql.usuario.domain.RefreshToken;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -23,6 +19,7 @@ import java.util.stream.Collectors;
 public class AuthApplicationService implements AuthService {
 
     AuthenticationManager authenticationManager;
+    RefreshTokenService refreshTokenService;
     JwtUtils jwtUtils;
 
     @Override
@@ -32,7 +29,8 @@ public class AuthApplicationService implements AuthService {
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String jwt = jwtUtils.generateJwtToken(authentication);
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
+        RefreshToken refreshToken = refreshTokenService.createRefreshToken(userDetails.getId());
         log.info("[finaliza] AuthApplicationService - autentica");
-        return new JwtResponse(jwt,userDetails);
+        return new JwtResponse(jwt,userDetails, refreshToken.getToken());
     }
 }

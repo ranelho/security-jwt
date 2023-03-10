@@ -2,17 +2,16 @@ package com.bezkoder.spring.security.postgresql.usuario.application.service;
 
 import com.bezkoder.spring.security.postgresql.handler.APIException;
 import com.bezkoder.spring.security.postgresql.security.services.UserDetailsApplicationService;
-import com.bezkoder.spring.security.postgresql.usuario.application.api.RoleResponse;
-import com.bezkoder.spring.security.postgresql.usuario.application.api.RoleRuquest;
-import com.bezkoder.spring.security.postgresql.usuario.application.api.UserRequest;
-import com.bezkoder.spring.security.postgresql.usuario.application.api.UserResponse;
+import com.bezkoder.spring.security.postgresql.usuario.application.api.response.RoleResponse;
+import com.bezkoder.spring.security.postgresql.usuario.application.api.request.RoleRuquest;
+import com.bezkoder.spring.security.postgresql.usuario.application.api.request.UserRequest;
+import com.bezkoder.spring.security.postgresql.usuario.application.api.response.UserResponse;
 import com.bezkoder.spring.security.postgresql.usuario.application.repository.RoleRepository;
 import com.bezkoder.spring.security.postgresql.usuario.application.repository.UserRepository;
 import com.bezkoder.spring.security.postgresql.usuario.domain.Role;
 import com.bezkoder.spring.security.postgresql.usuario.domain.User;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import lombok.var;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 

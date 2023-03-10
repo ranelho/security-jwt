@@ -1,18 +1,18 @@
 # Spring Boot, Spring Security, PostgreSQL: JWT Authentication & Authorization example
-# Codigo Original: https://www.bezkoder.com/spring-boot-security-postgresql-jwt-authentication/
-# Adapação para Necessidade e implementação de metodos, POST, GET.
+# Código Original: https://www.bezkoder.com/spring-boot-security-postgresql-jwt-authentication/
+# Adapação para Necessidade e implementação de métodos, POST, GET.
 
-## User Registration, User Login and Authorization process.
-The diagram shows flow of how we implement User Registration, User Login and Authorization process.
+## Cadastro de Usuário, Login de Usuário e Processo de Autorização.
+O diagrama mostra o fluxo de como implementamos o processo de Registro de Usuário, Login de Usuário e Autorização.
 
 ![spring-boot-spring-security-postgresql-jwt-authentication-flow](spring-boot-spring-security-postgresql-jwt-authentication-flow.png)
 
-## Spring Boot Server Architecture with Spring Security
-You can have an overview of our Spring Boot Server with the diagram below:
+## Arquitetura do Spring Boot Server com Spring Security
+Você pode ter uma visão geral do nosso Spring Boot Server com o diagrama abaixo:
 
 ![spring-boot-spring-security-postgresql-jwt-authentication-architecture](spring-boot-spring-security-postgresql-jwt-authentication-architecture.png)
 
-For more detail, please visit:
+## Para mais detalhes, visite:
 > [Spring Boot, Spring Security, PostgreSQL: JWT Authentication & Authorization example](https://bezkoder.com/spring-boot-security-postgresql-jwt-authentication/)
 
 > [For MySQL](https://bezkoder.com/spring-boot-jwt-authentication/)
@@ -23,9 +23,9 @@ For more detail, please visit:
 
 ![spring-boot-refresh-token-jwt-example-flow](spring-boot-refresh-token-jwt-example-flow.png)
 
-For instruction: [Spring Boot Refresh Token with JWT example](https://bezkoder.com/spring-boot-refresh-token-jwt/)
+Para instrução: [Spring Boot Refresh Token with JWT example](https://bezkoder.com/spring-boot-refresh-token-jwt/)
 
-## More Practice:
+## Mais prática:
 > [Spring Boot File upload example with Multipart File](https://bezkoder.com/spring-boot-file-upload/)
 
 > [Exception handling: @RestControllerAdvice example in Spring Boot](https://bezkoder.com/spring-boot-restcontrolleradvice/)
@@ -34,14 +34,14 @@ For instruction: [Spring Boot Refresh Token with JWT example](https://bezkoder.c
 
 > [Spring Boot Pagination & Sorting example](https://www.bezkoder.com/spring-boot-pagination-sorting-example/)
 
-Associations:
+Associações:
 > [Spring Boot One To Many example with Spring JPA, Hibernate](https://www.bezkoder.com/jpa-one-to-many/)
 
 > [Spring Boot Many To Many example with Spring JPA, Hibernate](https://www.bezkoder.com/jpa-many-to-many/)
 
 > [JPA One To One example with Spring Boot](https://www.bezkoder.com/jpa-one-to-one/)
 
-Run both Back-end & Front-end in one place:
+Execute o Backend e o Frontend em um só lugar:
 > [Integrate Angular with Spring Boot Rest API](https://bezkoder.com/integrate-angular-spring-boot/)
 
 > [Integrate React.js with Spring Boot Rest API](https://bezkoder.com/integrate-reactjs-spring-boot/)

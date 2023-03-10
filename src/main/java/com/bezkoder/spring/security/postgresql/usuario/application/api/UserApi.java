@@ -1,6 +1,10 @@
 package com.bezkoder.spring.security.postgresql.usuario.application.api;
 
 
+import com.bezkoder.spring.security.postgresql.usuario.application.api.request.RoleRuquest;
+import com.bezkoder.spring.security.postgresql.usuario.application.api.request.UserRequest;
+import com.bezkoder.spring.security.postgresql.usuario.application.api.response.RoleResponse;
+import com.bezkoder.spring.security.postgresql.usuario.application.api.response.UserResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

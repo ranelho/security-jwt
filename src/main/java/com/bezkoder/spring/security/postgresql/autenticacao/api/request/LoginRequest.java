@@ -1,4 +1,4 @@
-package com.bezkoder.spring.security.postgresql.autenticacao.api;
+package com.bezkoder.spring.security.postgresql.autenticacao.api.request;
 
 import lombok.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

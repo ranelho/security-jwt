@@ -1,4 +1,4 @@
-package com.bezkoder.spring.security.postgresql.usuario.application.api;
+package com.bezkoder.spring.security.postgresql.usuario.application.api.request;
 
 import com.bezkoder.spring.security.postgresql.usuario.domain.ERole;
 

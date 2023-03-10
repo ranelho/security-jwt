@@ -1,4 +1,4 @@
-package com.bezkoder.spring.security.postgresql.autenticacao.api;
+package com.bezkoder.spring.security.postgresql.autenticacao.api.response;
 
 public class MessageResponse {
 	private String message;

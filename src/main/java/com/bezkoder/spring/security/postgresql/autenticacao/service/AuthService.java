@@ -1,6 +1,6 @@
-package com.bezkoder.spring.security.postgresql.autenticacao.api.service;
+package com.bezkoder.spring.security.postgresql.autenticacao.service;
 
-import com.bezkoder.spring.security.postgresql.autenticacao.api.JwtResponse;
+import com.bezkoder.spring.security.postgresql.autenticacao.api.response.JwtResponse;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 
 public interface AuthService {

@@ -1,4 +1,4 @@
-package com.bezkoder.spring.security.postgresql.usuario.application.api;
+package com.bezkoder.spring.security.postgresql.usuario.application.api.response;
 
 import com.bezkoder.spring.security.postgresql.usuario.domain.User;
 import lombok.Value;

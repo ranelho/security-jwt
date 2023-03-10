@@ -1,6 +1,6 @@
 package com.bezkoder.spring.security.postgresql.usuario.domain;
 
-import com.bezkoder.spring.security.postgresql.usuario.application.api.RoleRuquest;
+import com.bezkoder.spring.security.postgresql.usuario.application.api.request.RoleRuquest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

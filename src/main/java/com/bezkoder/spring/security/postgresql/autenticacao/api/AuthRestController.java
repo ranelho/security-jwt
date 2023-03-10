@@ -1,6 +1,8 @@
 package com.bezkoder.spring.security.postgresql.autenticacao.api;
 
-import com.bezkoder.spring.security.postgresql.autenticacao.api.service.AuthService;
+import com.bezkoder.spring.security.postgresql.autenticacao.api.request.LoginRequest;
+import com.bezkoder.spring.security.postgresql.autenticacao.api.response.JwtResponse;
+import com.bezkoder.spring.security.postgresql.autenticacao.service.AuthService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.security.core.AuthenticationException;

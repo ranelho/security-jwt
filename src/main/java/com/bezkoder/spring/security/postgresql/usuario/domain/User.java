@@ -1,6 +1,6 @@
 package com.bezkoder.spring.security.postgresql.usuario.domain;
 
-import com.bezkoder.spring.security.postgresql.usuario.application.api.UserRequest;
+import com.bezkoder.spring.security.postgresql.usuario.application.api.request.UserRequest;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +13,6 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.Collections;
 import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 
 @Entity
