@@ -24,4 +24,7 @@ public interface AuthApi {
 
     @PostMapping("/signout")
     MessageResponse logoutUser();
+
+    @GetMapping("/validateToken")
+    Boolean validateToken(@RequestParam("token") String token);
 }

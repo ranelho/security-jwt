@@ -60,4 +60,13 @@ public class AuthApplicationService implements AuthService {
         refreshTokenService.deleteByUserId(userId);
         return new MessageResponse("Log out successful!");
     }
+
+    @Override
+    public boolean validateToken(String token) {
+        if (token == null) {
+            return false;
+        }
+        String jwtToken = token.substring(7);
+        return jwtUtils.validateJwtToken(jwtToken);
+    }
 }

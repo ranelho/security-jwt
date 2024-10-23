@@ -6,6 +6,7 @@ import com.rlti.security.autenticacao.application.api.request.TokenRefreshReques
 import com.rlti.security.autenticacao.application.api.response.JwtResponse;
 import com.rlti.security.autenticacao.application.api.response.MessageResponse;
 import com.rlti.security.autenticacao.application.service.AuthService;
+import io.jsonwebtoken.Claims;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.security.core.AuthenticationException;
@@ -39,5 +40,10 @@ public class AuthRestController implements AuthApi {
         MessageResponse messageResponse = authService.logoutUser();
         log.info("[finaliza] AuthRestController - logoutUser");
         return messageResponse;
+    }
+
+    @Override
+    public Boolean validateToken(String token) {
+        return authService.validateToken(token);
     }
 }

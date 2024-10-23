@@ -1,11 +1,12 @@
 server:
+  port: 8000
   servlet:
     context-path: /security/api
 
 spring:
   datasource:
     driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/testdb?createDatabaseIfNotExist=true
+    url: jdbc:postgresql://localhost:5433/gestao-servicos
     username: postgres
     password: 852456
   jpa:

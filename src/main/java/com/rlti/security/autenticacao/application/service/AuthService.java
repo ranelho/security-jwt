@@ -10,4 +10,5 @@ public interface AuthService {
     JwtResponse autentica(UsernamePasswordAuthenticationToken userPassToken);
     TokenRefreshResponse reativaAutenticacao(TokenRefreshRequest request);
     MessageResponse logoutUser();
+    boolean validateToken(String token);
 }
